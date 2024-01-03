@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-Editor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <div class="container">
+    <div class="font-style">
+      <h3>Font:</h3>
+      <select id="select" class="select"
+        onchange="changeFontStyle (this);"> 
+        <option value="Times New Roman"  selected="selected">  Times New Roman  </option> 
+        <option value="Arial">Arial</option> 
+        <option value="fantasy">Fantasy</option> 
+        <option value="cursive">cursive</option> 
+        <option value="sans-serif">sans-serif</option> 
+        <option value="serif">serif</option> 
+        <option value="Helvetica">Helvetica</option> 
+        <option value="courier">courier</option> 
+        
+      </select>
+    </div>
+    <div class="col1">
+        <div class="first-box1">
+            <h3>Size:</h3>
+        <input type="number" id="font-size1" min="1" max="100" value="20" onchange="sizeFun(this)">
+        </div>
+        <div class="sec-box1">
+            <h3>Color:</h3>
+        <input type="color" id="font-size1" min="1" max="100" value="20" onchange="colorFun(this)">
+        </div>
+    </div>
+    <div class="changes">
+        <button id="undo" onclick="undo()">Undo</button>
+        <button id="redo">Redo</button>
+    </div>
+    </div>
+    
+    <div id="textareaContainer">
+        <div id="draggableText" contenteditable="true">New Text!</div>
+      </div>
+   
+</body>
+</html>
+
+
+
+
+
+
+
+
+
